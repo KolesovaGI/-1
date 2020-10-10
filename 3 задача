@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+
+//Task3
+
+double power(double x, long y)
+{
+  if (y == 0) return 1;
+
+  if (y < 0) return power(1.0 / x, -y);
+
+  return x * power(x, y - 1);
+
+}
+
+int main()
+{
+  double x;
+
+  long y;
+
+  while (scanf("%lf %ld", &x, &y) == 2)
+
+  {
+  
+  printf("%lf\n", power(x, y));
+  }
+
+}
