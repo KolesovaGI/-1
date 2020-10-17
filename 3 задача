@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-//Task3
-
 double power(double x, long y)
 {
   if (y == 0) return 1;
@@ -10,7 +8,6 @@ double power(double x, long y)
   if (y < 0) return power(1.0 / x, -y);
 
   return x * power(x, y - 1);
-
 }
 
 int main()
@@ -22,8 +19,7 @@ int main()
   while (scanf("%lf %ld", &x, &y) == 2)
 
   {
-  
-  printf("%lf\n", power(x, y));
+    printf("%lf\n", power(x, y));
   }
 
 }
