@@ -1,25 +1,26 @@
 #include <stdio.h>
-#include <math.h>
-
-double power(double x, long y)
+int get_power (int number, int power);
+int main (void) 
 {
-  if (y == 0) return 1;
+  int number;
+  int power;
 
-  if (y < 0) return power(1.0 / x, -y);
+  scanf ("%d", & number);
+  printf ("enter the degree: ");
 
-  return x * power(x, y - 1);
+  scanf ("%d", & power);
+  printf ("%d", get_power (number, power));
 }
 
-int main()
+int get_power (int number, int power)
 {
-  double x;
-
-  long y;
-
-  while (scanf("%lf %ld", &x, &y) == 2)
-
+  int result = 1;
+  
+  for (int i = 0; i < power; i++)
   {
-    printf("%lf\n", power(x, y));
-  }
-
+    result *=  number;
+  } 
+  
+  return result;
 }
+
