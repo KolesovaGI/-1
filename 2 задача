@@ -22,6 +22,7 @@ int is_simple (long int number)
 
   return 0;
 }
+
 int main()
 {
   long int number;
